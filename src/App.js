@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 
 function App() {
   
   return (
     <div>
-      <h3>Hello World</h3>
+      <DisplayPosts />
+
     </div>
   );
 }
