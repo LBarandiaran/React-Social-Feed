@@ -1,23 +1,25 @@
 
 const DisplayPosts  = (props) => {
     return (
-    <table>
+      <table>
         <thead>
-          <tr>
-            <th>Entry Number</th>
-            <th>Weight</th>
-            <th>Date</th>
-          </tr>
+        <tr>
+          <th>Name</th>
+          <th>Post</th>            
+        </tr>
         </thead>
         <tbody>
+        {posts.map((post) => {
+          return (
           <tr>
-            <td>1</td>
-            <td>175</td>
-            <td>11-23-2021</td>
+            <td>{entry.name}</td>
+            <td>{entry.post}</td>
           </tr>
+          );
+        })}        
         </tbody>
-    </table>
-      );
+      </table>
+    );
 }
  
 export default DisplayPosts;

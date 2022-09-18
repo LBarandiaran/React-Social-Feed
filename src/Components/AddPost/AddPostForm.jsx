@@ -6,8 +6,18 @@ const AddPostForm = (props) => {
     const [name, setName] = useState(0);
     const [post, setPost] = useState('');
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        let newPost = {
+            name: name,
+            post: post
+        };
+        console.log(newPost);
+        props.addNewPostProperty(newPost)
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
             <label>Post</label>
