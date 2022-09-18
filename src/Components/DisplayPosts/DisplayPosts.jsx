@@ -9,9 +9,9 @@ const DisplayPosts  = (props) => {
         </tr>
         </thead>
         <tbody>
-        {posts.map((post) => {
+        {props.parentPosts.map((post, index) => {
           return (
-          <tr>
+          <tr key={index}>
             <td>{entry.name}</td>
             <td>{entry.post}</td>
           </tr>
