@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+
 
 
 const AddPostForm = (props) => {
@@ -20,9 +22,10 @@ const AddPostForm = (props) => {
         <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
+            <div></div>
             <label>Post</label>
             <input type='text' value={post} onChange={(event) => setPost(event.target.value)} />
-            <button type='submit'>Create</button>
+            <Button variant="primary">Create</Button>
         </form>
       );
 }
