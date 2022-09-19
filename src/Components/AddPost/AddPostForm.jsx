@@ -22,7 +22,7 @@ const AddPostForm = (props) => {
             <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
             <label>Post</label>
             <input type='text' value={post} onChange={(event) => setPost(event.target.value)} />
-            <button type='submit'>Post</button>
+            <button type='submit'>Create</button>
         </form>
       );
 }

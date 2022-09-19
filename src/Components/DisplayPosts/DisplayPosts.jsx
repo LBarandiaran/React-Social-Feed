@@ -1,24 +1,21 @@
+import './DisplayPosts.css'
 
 const DisplayPosts  = (props) => {
     return (
-      <table>
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Post</th>            
-        </tr>
-        </thead>
-        <tbody>
+      <div>
+       
+          
+        <div>
         {props.parentPosts.map((post, index) => {
           return (
-          <tr key={index}>
-            <td>{post.name}</td>
-            <td>{post.post}</td>
-          </tr>
+          <div key={index}>
+            <div>{post.name}</div>
+            <div>{post.post}</div>
+          </div>
           );
         })}        
-        </tbody>
-      </table>
+        </div>
+      </div>
     );
 }
  

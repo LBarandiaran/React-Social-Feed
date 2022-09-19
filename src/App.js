@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 import AddPostForm from './Components/AddPost/AddPostForm';
+import './App.css';
 
 function App() {
 
@@ -14,10 +15,13 @@ function App() {
   }
   
   return (
-    <div>
-      <DisplayPosts parentPosts={posts} />
-      <AddPostForm addNewPostProperty={addNewPost} />
-
+    <div className='container-fluid'>
+      <div className='border-box'>        
+        <AddPostForm addNewPost={addNewPost} />
+      </div>
+      <div className='border-box'>
+        <DisplayPosts parentPosts={posts} />
+      </div>
     </div>
   );
 }
